@@ -6,9 +6,16 @@ Pour lancer l'execution, c'est simple :
 - Cloner ce projet 
 
 - S'assurer d'avoir un gpu équipé de core cuda (nvidia), et d'avoir une version de torch compatible avec les core cuda. Si ce n'est pas le cas, il faut executer : 
-pip uninstall torch (si torch déjà installé)
-pip cache purge
-pip install torch -f https://download.pytorch.org/whl/torch_stable.html
+  pip uninstall torch (si torch déjà installé)
+  pip cache purge
+  pip install torch -f https://download.pytorch.org/whl/torch_stable.html
+
+  Si vous n'avez pas de GPU équipé de core cuda, remplacer la ligne
+
+  device = torch.device("cuda")
+  par
+  device = torch.device("cpu")
+  dans la deuxième cellule.
 
 - Avoir une connexion à la première execution afin de télécharger le dataset
 
